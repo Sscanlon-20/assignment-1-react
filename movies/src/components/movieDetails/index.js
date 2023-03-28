@@ -8,9 +8,9 @@ import NavigationIcon from "@mui/icons-material/Navigation";
 import Fab from "@mui/material/Fab";
 import Typography from "@mui/material/Typography";
 import Drawer from "@mui/material/Drawer";
-import MovieReviews from "../movieReviews"
-
-
+import MovieReviews from "../movieReviews";
+import MovieIcon from '@mui/icons-material/Movie';
+import { Link } from "react-router-dom";
 
 const root = {
     display: "flex",
@@ -25,14 +25,12 @@ const chip = { margin: 0.5 };
 const MovieDetails = ({ movie }) => {  // Don't miss this!
   const [drawerOpen, setDrawerOpen] = useState(false);
   
-
   return (
     <>
-      <Typography variant="h5" component="h3">
+      <Typography variant="h3" component="h4">
         Overview
       </Typography>
-
-      <Typography variant="h6" component="p">
+      <Typography variant="h5" component="p">
         {movie.overview}
       </Typography>
 
@@ -74,7 +72,17 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
             <Chip label={g.name} sx={{...chip}} />
           </li>
         ))}
-      </Paper>
+      </Paper> 
+
+          
+      <Typography variant="h3" component="h4">
+        Credits
+      </Typography>
+      <Typography variant="h5" component="p">
+        
+        {movie.credits}
+        
+      </Typography>
 
       <Fab
         color="secondary"
@@ -93,6 +101,21 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
         <MovieReviews movie={movie} />
       </Drawer>
 
+      <Link to={`/movies/recommended/${movie.id}`}>
+      <Fab
+        color="secondary"
+        variant="extended"
+        onClick={() =>setDrawerOpen(true)}
+        sx={{
+          position: 'fixed',
+          bottom: '1em',
+          right: '12em'
+        }}
+      >
+        <MovieIcon/>
+        Recommendations
+      </Fab>
+      </Link>    
       </>
   );
 };

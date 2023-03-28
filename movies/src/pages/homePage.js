@@ -5,6 +5,8 @@ import { useQuery } from 'react-query';
 import Spinner from '../components/spinner';
 import AddToFavoritesIcon from '../components/cardIcons/addToFavorites';
 import PlaylistAddIcon from '../components/cardIcons/addToPlaylist';
+//import Pagination from '@mui/material/Pagination';
+//import PaginationItem from '@mui/material/PaginationItem';
 
 const HomePage = (props) => {
 
@@ -35,8 +37,9 @@ const HomePage = (props) => {
             <PlaylistAddIcon movie={movie} />
           </>
         );
-       
         
+
+       // <Pagination count={10} color="secondary" /> 
       }}
     />
 );

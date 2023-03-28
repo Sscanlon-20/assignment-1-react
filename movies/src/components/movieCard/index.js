@@ -15,8 +15,6 @@ import Avatar from '@mui/material/Avatar';
 import { Link } from "react-router-dom";
 import { MoviesContext } from "../../contexts/moviesContext";
 
-
-
 export default function MovieCard({ movie, action }) {
   const { favorites } = useContext(MoviesContext);
 
@@ -42,6 +40,8 @@ export default function MovieCard({ movie, action }) {
           </Typography>
         }
       />
+
+      
 
       <CardMedia
         sx={{ height: 500 }}

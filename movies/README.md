@@ -11,9 +11,9 @@ Name: Sarah Scanlon (96142331)
 
 + A to watch list (with buttons on the movie cards on the top rated, upcoming and home pages)
 + Top rated movies page
-+ 
-+ 
-+ 
++ Movie credits added to the movie details page
++ Button linking to similar movies page (button contains movie icon from mui)
++ Add to favourite button added to top rated movie cards
 
 ## Setup requirements.
 
@@ -32,12 +32,14 @@ e.g.
 
 [ List the __new routes__ supported by your app and state the associated page.]
 
-+ /movies/:watchlist - displays list of movies the user want to watch
++ /movies/watchlist - displays list of movies the user want to watch
 + /movies/topRated - displays list of top rated movies
-+ /blogs/:id/comments - detail view of a particular blog and its comments.
-+ etc.
++ 
++ 
 
-[If relevant, state what aspects of your app are protected (i.e. require authentication) and what is public.]
+[If relevant, state what aspects of your app are protected (i.e. require authentication) and what is public.] 
+
+N/A
 
 ## Independent learning (If relevant).
 
