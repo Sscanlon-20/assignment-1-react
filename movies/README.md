@@ -16,7 +16,6 @@ Name: Sarah Scanlon (96142331)
 + Add to favourites button added to top rated movie cards
 + Page displaying all movies currently showing in Irish cinemas
 
-
 ## Setup requirements.
 
 N/A
@@ -28,8 +27,9 @@ N/A
 e.g.
 + Top rated movies list - /movie/top_rated
 + Movie credits - /movie/{movie_id}/credits
-+ Recommened movies for each movie  - /movie/{movie_id}/recommendations
++ Recommened movies for each movie - /movie/{movie_id}/recommendations
 + Movies now playing in Irish cinemas - /movie/now_playing ??
++ trending movies on a current week - /trending/{media_type}/{time_window} (/trending/movie/week)
 
 ## Routing.
 
@@ -39,10 +39,7 @@ e.g.
 + /movies/topRated - displays list of top rated movies
 + /movies/nowplayingmovies - displays list of movies in Irish cinemas
 + /movies/recommended/:id - displays movies recommended based on a selected movie
-
-[If relevant, state what aspects of your app are protected (i.e. require authentication) and what is public.] 
-
-N/A
++ /movies/trending - displays movies that are trending on a current week
 
 ## Independent learning (If relevant).
 

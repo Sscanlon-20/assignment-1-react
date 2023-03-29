@@ -25,7 +25,7 @@ const NowPlayingMoviesPage = (props) => {
  
   return (
     <PageTemplate
-      title="Movies in Cinemas Now"
+      title="Movies Showing in Irish Cinemas"
       movies={movies}
       action={(movie) => {
         return (

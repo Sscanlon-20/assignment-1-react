@@ -5,6 +5,7 @@ import MoviePage from "./pages/movieDetailsPage";
 import FavoriteMoviesPage from "./pages/favoriteMoviesPage";
 import MovieReviewPage from "./pages/movieReviewPage";
 import UpcomingMoviesPage from "./pages/upcomingMoviesPage";
+import NowPlayingMoviesPage from "./pages/nowPlayingMoviesPage";
 import RecommendedMoviesPage from "./pages/recommendedMoviesPage";
 import SiteHeader from './components/siteHeader'
 import { BrowserRouter, Route, Navigate, Routes } from "react-router-dom";
@@ -14,8 +15,7 @@ import MoviesContextProvider from "./contexts/moviesContext";
 import AddMovieReviewPage from './pages/addMovieReviewPage'
 import ToWatchPage from "./pages/toWatchPage";
 import TopRatedMoviesPage from "./pages/topRatedMoviesPage";
-import NowPlayingMoviesPage from "./pages/nowPlayingMoviesPage";
-
+import TrendingMoviesPage from "./pages/trendingMoviesPage";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -37,10 +37,11 @@ const App = () => {
           <Route path="/reviews/form" element={ <AddMovieReviewPage /> } />
           <Route path="/movies/favorites" element={<FavoriteMoviesPage />} />
           <Route path="/movies/upcoming" element={<UpcomingMoviesPage />} />
-          <Route path="/movies/nowplayingmovies" element={<NowPlayingMoviesPage />} />
+          <Route path="/movies/trending" element={<TrendingMoviesPage />} />
+          <Route path="/movies/nowplaying" element={<NowPlayingMoviesPage />} />
+          <Route path="/movies/recommended/:id" element={<RecommendedMoviesPage />} />
           <Route path="/movies/topRated" element={<TopRatedMoviesPage />} />
           <Route path="/movies/watchlist" element={ <ToWatchPage /> } />
-          <Route path="/movies/recommended/:id" element={<RecommendedMoviesPage />} />
           <Route path="/reviews/:id" element={ <MovieReviewPage /> } />
           <Route path="/movies/:id" element={<MoviePage />} />
           <Route path="/" element={<HomePage />} />
