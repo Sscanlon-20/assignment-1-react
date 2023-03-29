@@ -22,7 +22,7 @@ const root = {
 };
 const chip = { margin: 0.5 };
 
-const MovieDetails = ({ movie }) => {  // Don't miss this!
+const MovieDetails = ({ movie, credits }) => {  // Don't miss this!
   const [drawerOpen, setDrawerOpen] = useState(false);
   
   return (
@@ -73,15 +73,21 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
           </li>
         ))}
       </Paper> 
-
           
       <Typography variant="h3" component="h4">
-        Credits
+        Credits 
+
+        <h5>Cast</h5>
       </Typography>
+
+      
       <Typography variant="h5" component="p">
         
-        {movie.credits}
-        
+      {credits.cast.map((c) => (
+         <li key={c.name}>
+            <Chip label={c.name} sx={{...chip}} />
+          </li>
+        ))}
       </Typography>
 
       <Fab

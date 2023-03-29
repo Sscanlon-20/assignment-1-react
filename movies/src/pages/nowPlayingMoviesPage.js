@@ -4,10 +4,11 @@ import { getNowPlayingMovies } from "../api/tmdb-api";
 import PlaylistAddIcon from '../components/cardIcons/addToPlaylist';
 import { useQuery } from 'react-query';
 import Spinner from '../components/spinner';
+import AddToFavoritesIcon from '../components/cardIcons/addToFavorites';
 
-const UpcomingMoviesPage = (props) => {
+const NowPlayingMoviesPage = (props) => {
 
-  const {  data, error, isLoading, isError }  = useQuery('Upcoming', getNowPlayingMovies)
+  const { data, error, isLoading, isError }  = useQuery('NowPlaying', getNowPlayingMovies)
 
   if (isLoading) {
     return <Spinner />
@@ -24,15 +25,20 @@ const UpcomingMoviesPage = (props) => {
  
   return (
     <PageTemplate
-      title="Upcoming Movies"
+      title="Movies in Cinemas Now"
       movies={movies}
       action={(movie) => {
-        return <PlaylistAddIcon movie={movie} />
+        return (
+          <>
+            <AddToFavoritesIcon movie={movie} />
+            <PlaylistAddIcon movie={movie} />
+          </>
+        );
       }}
-    />
+      />
 );
 };
-export default UpcomingMoviesPage;
+export default NowPlayingMoviesPage;
 
  
 
