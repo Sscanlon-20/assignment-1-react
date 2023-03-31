@@ -9,17 +9,20 @@ Name: Sarah Scanlon (96142331)
 ### Features.
 [ A bullet-point list of the __new features__ you added to the Movies Fan app (and any modifications to existing features) .]
 
-+ A to watch list page (with buttons on each movie card in the top rated, upcoming, now showing, trending and     home pages)
+## NEW PAGES
++ A to watch list page (with buttons on the movie card in the top rated, upcoming, now showing, trending and     home pages)
 + Top rated movies page
-+ Movie credits added to the movie details page
-+ Button linking to recommended movies for each movie (button contains movie icon from mui)
-+ Add to favourites button added to top rated, now showing and trending movie cards
 + Page displaying all movies currently showing in Irish cinemas
-+ Made little changes to the text on the site header
 + Page displaying trending movies - this changes daily
++ Button linking to a page with recommended movies for each movie (button contains movie icon from mui)
+
+## NEW FEATURES AND MODIFICATIONS TO EXISTING CODE
++ Movie credits added to the movie details page
 + MUI pagination added to the cast and crew tables in the credits section
++ Add to favourites button added to top rated, now showing and trending movie cards
 + Edited the chips a little in the overview section of the movie details page
-+ #### Pagination added to the movie lists #### maybe
++ Made little changes to the text on the site header (wording, font size)
+
 
 ## Setup requirements.
 
@@ -48,7 +51,6 @@ e.g.
 
 ## Independent learning.
 
-I had to research how to add the pagination to the credits tables on the movies details page, I found the best help for this at https://www.geeksforgeeks.org/react-mui-tablepagination-api/ I took snipits of the code on this page and edited as needed. using this set up as a starting point I also added pagination to the template movie list page.
-
+I had to research how to add the pagination to the credits tables on the movies details page, I found the best help for this at https://www.geeksforgeeks.org/react-mui-tablepagination-api/ I took snipits of the code on this page and edited as needed. 
 
 

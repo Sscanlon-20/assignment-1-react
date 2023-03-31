@@ -41,6 +41,9 @@ const MovieDetails = ({ movie, credits }) => {  // Don't miss this!
   
   const [pg, setpg] = React.useState(0);
     const [rpg, setrpg] = React.useState(10);
+
+    const [pg2, setpg2] = React.useState(0);
+    const [rpg2] = React.useState(10);
   
     function handleCastPage(event, newpage) {
         setpg(newpage);
@@ -52,12 +55,12 @@ const MovieDetails = ({ movie, credits }) => {  // Don't miss this!
     }
   
     function handleCrewPage(event, newpage) {
-        setpg(newpage);
+        setpg2(newpage);
     }
   
     function handleCrewRowsPerPage(event) {
         setrpg(parseInt(credits.crew.length/10));
-        setpg(0);
+        setpg2(0);
     }
     
   return (
@@ -170,7 +173,7 @@ const MovieDetails = ({ movie, credits }) => {  // Don't miss this!
           </TableRow>
         </TableHead>
         <TableBody>
-          {credits.crew.slice(pg * rpg, pg * rpg + rpg).map((c) => (
+          {credits.crew.slice(pg2 * rpg2, pg2 * rpg2 + rpg2).map((c) => (
             <TableRow key={c.name}>
               <TableCell align="center" component="th" scope="row"><h2>{c.name}</h2></TableCell>
               <TableCell align="center"><h2>{c.department}</h2></TableCell>
@@ -185,8 +188,8 @@ const MovieDetails = ({ movie, credits }) => {  // Don't miss this!
                 rowsPerPageOptions={[10]}
                 component="div"
                 count={credits.crew.length}
-                rowsPerPage={rpg}
-                page={pg}
+                rowsPerPage={rpg2}
+                page={pg2}
                 onPageChange={handleCrewPage}
                 onRowsPerPageChange={handleCrewRowsPerPage}
             />
