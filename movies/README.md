@@ -4,7 +4,7 @@ Name: Sarah Scanlon (96142331)
 
 ## Overview.
 
-[A brief statement on the content of this repository.]
+This is a web application using TMDB endpoint API's and MUI components. The app is a database of movies showing different views such as discover, upconimg trending etc. Users can add to favourites, a to watch list. leave and add reviews and see all info about the movies along with recommended movies based on the movie they are looking at.
 
 ### Features.
 [ A bullet-point list of the __new features__ you added to the Movies Fan app (and any modifications to existing features) .]
