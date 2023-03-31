@@ -30,8 +30,7 @@ const SiteHeader = ({ history }) => {
     { label: "In Cinemas", path: "/movies/nowplaying" },
     { label: "Trending", path: "/movies/trending" },
     { label: "Favorites", path: "/movies/favorites" },
-    { label: "To Watch", path: "/movies/watchlist" },
-    
+    { label: "To Watch", path: "/movies/watchlist" },  
   ];
 
   const handleMenuSelect = (pageURL) => {
@@ -47,14 +46,14 @@ const SiteHeader = ({ history }) => {
       <AppBar position="fixed" color="secondary">
         <Toolbar>
           <Typography variant="h4" sx={{ flexGrow: 1 }}>
-            TMDB Client
+            Sarah's Movie App
           </Typography>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            All you ever wanted to know about Movies!
-          </Typography>
+          <Typography variant="h4" sx={{ flexGrow: 1 }}>
+            All you need to know about Movies!
+          </Typography >
             {isMobile ? (
               <>
-                <IconButton
+                <IconButton 
                   aria-label="menu"
                   aria-controls="menu-appbar"
                   aria-haspopup="true"

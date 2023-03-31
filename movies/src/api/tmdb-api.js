@@ -86,6 +86,7 @@ export const getMovieReviews = (id) => {
       // console.log(json.results);
       return json.results;
     });
+    
 };
 
 export const getTopRatedMovies = () => {
@@ -154,7 +155,7 @@ export const getNowPlayingMovies = () => {
 
 export const getTrendingMovies = () => {
   return fetch(
-    `https://api.themoviedb.org/3/trending/movie/week?api_key=${process.env.REACT_APP_TMDB_KEY}`
+    `https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.REACT_APP_TMDB_KEY}`
   )
   .then((response) => {
     if (!response.ok) {
